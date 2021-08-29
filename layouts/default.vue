@@ -71,6 +71,8 @@ export default {
   },
   methods: {
     menu() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
       var tl3 = new TimelineMax({ paused: false });
 
       if (this.showing == true) {
@@ -277,10 +279,10 @@ a {
   width: 50px;
   height: 50px;
   right: 0;
-  z-index: 3;
+  z-index: 101;
 }
 .tooltip {
-  z-index: 100;
+  z-index: 102;
   border-radius: 10px;
   // ...
   background-color: #378de5;
