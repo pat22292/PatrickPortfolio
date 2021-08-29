@@ -76,7 +76,7 @@ export default {
         // {id: "2",title: "Isn't Cool? we can make one for you.", location: require('~/assets/images/van6.gif')},
         {
           id: "2",
-          title: "Isn't Cool? we can make one for you.",
+          title: "Isn't Cool? let's make one for you.",
           location: require("~/assets/svg/van-shadowed.svg"),
         },
         {
