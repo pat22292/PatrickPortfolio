@@ -19,8 +19,6 @@
           <n-link to="/main" class="myButton" no-prefetch>Main</n-link>
           <!-- <button class="button button2"><n-link to="/main" no-prefetch>SVG TEST</n-link></button> -->
         </div>
-
-        <!-- <n-link to="/main" no-prefetch>About</n-link> -->
       </div>
     </div>
     <div class="right-area">
@@ -184,12 +182,14 @@ export default {
         .title-slide {
           // top: 50vh;
           background-color: #ffffff;
-          height: 100vh !important;
+          height: 25vh !important;
           position: fixed;
           width: 80vw;
+          top: 45vh;
           @include for-desktop-up {
             width: 45vw;
             top: 27vh;
+            height: 45vh !important;
           }
           @include for-Square {
             width: 30vw;
@@ -481,7 +481,7 @@ export default {
   height: 100vh;
   width: 100%;
   // overflow: hidden;
-  z-index: 100;
+  z-index: 1;
   @include for-desktop-up {
     background-size: cover;
   }
@@ -509,13 +509,14 @@ export default {
   -webkit-border-radius: 6px;
   border-radius: 6px;
   border: 1px solid #84bbf3;
-  display: inline-block;
+  display: absolute;
   cursor: pointer;
   color: #ffffff;
   font-family: Arial;
   font-size: 15px;
   font-weight: bold;
   padding: 6px 24px;
+  z-index: 1000;
   text-decoration: none;
   text-shadow: 0px 1px 0px #528ecc;
 }
@@ -536,7 +537,7 @@ export default {
   background-color: #378de5;
 }
 .myButton:active {
-  position: relative;
+  // position: relative;
   top: 1px;
 }
 </style>

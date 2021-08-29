@@ -34,6 +34,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/tooltip.js'
   ],
   /*
   ** Nuxt.js modules
@@ -64,6 +65,6 @@ export default {
     scss: [
       '~/assets/vars/*.scss',
       '~/assets/abstracts/_mixins.scss' // use underscore "_" & also file extension ".scss"
-      ]
+    ]
   }
 }
