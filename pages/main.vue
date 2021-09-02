@@ -81,7 +81,7 @@ export default {
     TweenMax.fromTo(
       "#main-page",
       1,
-      { y: -10, opacity: 0 },
+      { y: -100, opacity: 0 },
       { autoAlpha: 1, y: 0, ease: Power0.easeInOut },
       1.5
     );

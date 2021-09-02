@@ -13,8 +13,8 @@
         >
           <h1>{{ image.title }}</h1>
           <p>
-            Hi, we are group of freelancer developers and graphics designer, if
-            you need something just leave us a message.
+            Hi, I'm a freelancer developer and graphics designer, if you need
+            something just leave a message.
           </p>
           <n-link to="/main" class="myButton" no-prefetch>Main</n-link>
           <!-- <button class="button button2"><n-link to="/main" no-prefetch>SVG TEST</n-link></button> -->
@@ -97,16 +97,16 @@ export default {
 </script>
 
 <style lang="scss">
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-  transform: translateX(-10px);
-  transform-origin: 50% 50%;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  transform: translateX(-10px);
-  transform-origin: 50% 50%;
-}
+// .fade-enter-active,
+// .fade-leave-active {
+//   transition: opacity 0.5s;
+//   transform: translateX(-10px);
+//   transform-origin: 50% 50%;
+// }
+// .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+//   transform: translateX(-10px);
+//   transform-origin: 50% 50%;
+// }
 /* Transitions using the page hook */
 
 #Preloading {
@@ -472,7 +472,7 @@ export default {
 }
 
 #backgroundSVG {
-  position: absolute;
+  position: fixed;
   background-image: url(../assets/svg/back-4.svg);
   background-position: center;
   background-attachment: fixed;

@@ -74,30 +74,23 @@
 
 <script>
 export default {
-  data() {
-    return {
-      page: this.$router.history.current.path,
-    };
-  },
   mounted() {
-    console.log(this.page);
     var tl2 = new TimelineMax({ paused: false });
 
-    tl2.play();
-
+    // setTimeout(() => {}, 1500);
     tl2
       .fromTo(
         "#A",
         2,
         { x: -30, autoAlpha: 0 },
-        { x: 0, autoAlpha: 1, ease: Power4.easeInOut, repeat: 4 },
+        { x: 0, autoAlpha: 1, ease: Power4.easeInOut, repeat: 2 },
         0.1
       )
       .fromTo(
         "#A2",
         2,
         { x: -30 },
-        { x: 0, ease: Power3.easeInOut, repeat: 4 },
+        { x: 0, ease: Power3.easeInOut, repeat: 2 },
         1
       )
       .add("end")
@@ -105,12 +98,12 @@ export default {
         "#a3",
         2,
         { x: -30 },
-        { x: 0, ease: Power2.easeInOut, repeat: 4 },
+        { x: 0, ease: Power2.easeInOut, repeat: 2 },
         1
       )
       .to(
         "#loading",
-        5,
+        1,
         { autoAlpha: 0, scale: 0.8, display: "none", ease: Power4.easeInOut },
         "end",
         0.5
@@ -122,12 +115,7 @@ export default {
 <style lang="scss">
 #Loader {
   position: absolute;
-  z-index: 103;
-  width: 100vw;
-  height: 100vh;
-  background-color: #fbfbff;
-  margin: 0;
-  padding: 0;
+  z-index: 100;
 }
 #loading {
   display: flex;

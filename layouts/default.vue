@@ -30,7 +30,7 @@
 
     <!-- <button class="menuToggle" @click="menu()">Menu</button> -->
 
-    <FirstLoad />
+    <FirstLoad v-if="page == '/'" />
     <img class="company-logo" src="../assets/images/patlogo2.png" alt="#" />
 
     <nuxt />
@@ -44,6 +44,7 @@ export default {
   data() {
     return {
       showing: false,
+      page: this.$router.history.current.path,
     };
   },
   asyncData() {
@@ -55,7 +56,11 @@ export default {
   },
   mounted() {
     window.addEventListener("load", () => {
-      document.getElementById("Loader").setAttribute("style", "display: none;");
+      setTimeout(() => {
+        document
+          .getElementById("Loader")
+          .setAttribute("style", "display: none;");
+      }, 5000);
     });
 
     //      if (process.browser) {
@@ -140,16 +145,16 @@ export default {
 
 
 <style lang="scss">
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.5s ease-out;
-}
-.page-enter,
-.page-leave-active {
-  opacity: 0.5;
-  transform: translateY(-10px);
-  transform-origin: 50% 50%;
-}
+// .page-enter-active,
+// .page-leave-active {
+//   transition: all 0.5s ease-in-out;
+// }
+// .page-enter,
+// .page-leave-active {
+//   opacity: 0.5;
+//   transform: translateY(-5px);
+//   transform-origin: 50% 50%;
+// }
 body,
 html {
   padding: 0;
