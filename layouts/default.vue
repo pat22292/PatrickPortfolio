@@ -14,10 +14,10 @@
       <div class="data">
         <ul>
           <li>Navigation</li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Our Story</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
+          <li id="menu-1"><a href="#">Home</a></li>
+          <li id="menu-2"><a href="#">Our Story</a></li>
+          <li id="menu-3"><a href="#">Services</a></li>
+          <li id="menu-4"><a href="#">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -60,7 +60,7 @@ export default {
         document
           .getElementById("Loader")
           .setAttribute("style", "display: none;");
-      }, 5000);
+      }, 1000);
     });
 
     //      if (process.browser) {
@@ -91,12 +91,42 @@ export default {
         .staggerFromTo(
           ".button-background",
           1,
-          { scale: "0" },
-          { scale: "100", autoAlpha: 1, ease: Power1.easeInOut },
+          { scale: "0", backgroundColor: "#378de5" },
+          {
+            scale: "100",
+            backgroundColor: "#FFFFFF",
+            autoAlpha: 1,
+            ease: Power1.easeInOut,
+          },
           1
+        )
+        .staggerFromTo(
+          "#menu-1",
+          0.12,
+          { x: -100, opacity: 0 },
+          { x: 0, opacity: 1 }
+        )
+        .staggerFromTo(
+          "#menu-2",
+          0.08,
+          { x: -100, opacity: 0 },
+          { x: 0, opacity: 1 }
+        )
+        .staggerFromTo(
+          "#menu-3",
+          0.04,
+          { x: -100, opacity: 0 },
+          { x: 0, opacity: 1 }
+        )
+        .staggerFromTo(
+          "#menu-4",
+          0.01,
+          { x: -100, opacity: 0 },
+          { x: 0, opacity: 1 }
         )
         .add("show-menu")
         //  .staggerFromTo(".toggle-btn", .5, {rotation:0}, {rotation:360, ease:Linear.easeNonet}, .5)
+
         .staggerFromTo(
           ".bottom",
           0.1,
@@ -135,6 +165,7 @@ export default {
           "show-menu",
           0.75
         )
+
         .addPause();
       // TweenMax.fromTo("#Main-Menu", .5, {autoAlpha: 0}, {autoAlpha: 1,display: "flex", ease: Power4.easeInOut}, .5)
       // TweenMax.staggerFromTo(".menu", .5, {x: "-50px", autoAlpha: 0}, {x: "0px", autoAlpha: 1, ease: Power4.easeInOut}, .5)
@@ -190,7 +221,7 @@ html {
   height: 4px;
   margin-bottom: 5px;
   position: absolute;
-  background: #cdcdcd;
+  background: #9b1c1c;
   border-radius: 3px;
 
   transform-origin: 4px 0px;
@@ -256,18 +287,21 @@ ul {
 
 li:first-child {
   color: #000;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.35);
   font-family: Poppins;
   font-size: 24px;
 }
 
 li:not(:first-child) {
   color: #000;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.35);
   font-size: 42px;
 }
 
 a {
   text-decoration: none;
   color: #000;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.35);
   font-family: Poppins;
 }
 .button-background {
@@ -277,7 +311,6 @@ a {
   background-color: #fff;
   border-radius: 50%;
   // position: absolute;
-
   position: fixed;
   margin: 1em;
   padding: 1em;
