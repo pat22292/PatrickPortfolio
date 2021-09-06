@@ -16,7 +16,9 @@
             Hi, I'm a freelancer developer and graphics designer, if you need
             something just leave a message.
           </p>
-          <n-link to="/main" class="myButton" no-prefetch>Main</n-link>
+          <n-link to="/main" class="myButton" no-prefetch>{{
+            image.buttonName
+          }}</n-link>
           <!-- <button class="button button2"><n-link to="/main" no-prefetch>SVG TEST</n-link></button> -->
         </div>
       </div>
@@ -40,7 +42,9 @@
             you need something just leave us a message.
           </p>
           <!-- <a href="#" class="myButton">Main</a> -->
-          <n-link class="myButton" to="/main" no-prefetch>Main</n-link>
+          <n-link class="myButton" to="/main" no-prefetch>{{
+            image.buttonName
+          }}</n-link>
           <!-- <n-link to="/" no-prefetch> <button class="button button2">  SVG TEST</button></n-link> -->
         </div>
 
@@ -68,19 +72,22 @@ export default {
       images: [
         {
           id: "1",
-          title: "Graphics designs that stand out.",
+          title: "Decent Graphics design.",
           location: require("~/assets/svg/3d3.svg"),
+          buttonName: "Check Designs",
         },
         // {id: "2",title: "Isn't Cool? we can make one for you.", location: require('~/assets/images/van6.gif')},
         {
           id: "2",
           title: "Cool right? let's build yours.",
           location: require("~/assets/svg/van-shadowed.svg"),
+          buttonName: "Check Mob. App",
         },
         {
           id: "3",
           title: "Hi, Do you need a developer?",
           location: require("~/assets/svg/dev.svg"),
+          buttonName: "Check Web / App",
         },
       ],
     };
