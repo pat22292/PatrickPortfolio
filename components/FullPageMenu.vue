@@ -4,7 +4,7 @@
       <ul>
         <li>Navigation</li>
         <li id="first"><a href="#">Home</a></li>
-        <li id="second"><a href="#">Our Story</a></li>
+        <li id="second"><a href="#">My Story</a></li>
         <li id="third"><a href="#">Services</a></li>
         <li id="fourth"><a href="#">Contact</a></li>
       </ul>
